@@ -17,6 +17,8 @@ It uses trapper items so the scheduling is handled entirely independently from Z
 
 If `zabbix_sender` works for a host then this script should too. The py-zabbix module uses the configuration file for zabbix_agent to figure out where to send the trapper items to and such. That means the `ServerActive=`-parameter in *zabbix_agentd.conf* is used to figure out where to send the item.
 
+The default is `ServerActive=127.0.0.1` so this should work without any config changes needed if you run it directly on your zabbix server.
+
 `zabbix_sender` manpage: <https://www.zabbix.com/documentation/3.4/manpages/zabbix_sender>
 
 ## Installation
