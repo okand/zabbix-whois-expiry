@@ -9,6 +9,7 @@ import json
 from pyzabbix import ZabbixMetric, ZabbixSender
 
 wwwhost = sys.argv[1]
+zabbix_host = '\"' + sys.argv[2] + '\"'
 asdf = ''
 idx = 0
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -25,7 +26,7 @@ for idx, thing in enumerate(domains['domains']):
 done = '{"data":['+asdf+']}'
 
 
-packet = ZabbixMetric(wwwhost, 'domain.expiry.item', done),
+packet = ZabbixMetric(zabbix_host, 'domain.expiry.item', done),
 result = ZabbixSender(use_config=True).send(packet)
 
 ## some tests

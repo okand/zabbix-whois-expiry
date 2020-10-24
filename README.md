@@ -29,12 +29,14 @@ In the same folder as the scripts, create a folder called `whois` and create a j
 
 Add the Zabbix template to the host and schedule both the discovery and check scripts to run every day or however often you think is approperiate.
 
+Append the name of the system running this script to the end of the command, in the example below the host name is 'SRV - Web'.
+
 Example with cron:
 
 ```crontab
 
-20 12 * * * zabbix-whois-discovery.py example.host.name
-30 12 * * * zabbix-whois-check.py example.host.name
+20 12 * * * python3 zabbix-whois-discovery.py example.host.name "SRV - Web"
+30 12 * * * python3 zabbix-whois-check.py example.host.name "SRV - Web"
 
 ```
 
