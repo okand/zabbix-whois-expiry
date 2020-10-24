@@ -9,7 +9,7 @@ import json
 from pyzabbix import ZabbixMetric, ZabbixSender
 
 wwwhost = sys.argv[1]
-zabbix_host = '\"' + sys.argv[2] + '\"'
+zabbix_host = sys.argv[2]
 asdf = ''
 idx = 0
 dir_path = os.path.dirname(os.path.realpath(__file__))

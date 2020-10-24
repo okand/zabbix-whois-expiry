@@ -11,7 +11,7 @@ import whois
 from pyzabbix import ZabbixMetric, ZabbixSender
 
 wwwhost = sys.argv[1]
-zabbix_host = '\"' + sys.argv[2] + '\"'
+zabbix_host = sys.argv[2]
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 with open(dir_path+'/whois/'+wwwhost+'.json', 'r') as read_file:
