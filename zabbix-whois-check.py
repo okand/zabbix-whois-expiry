@@ -18,15 +18,15 @@ with open(dir_path+'/whois/'+wwwhost+'.json', 'r') as read_file:
 
 for domain in domains['domains']:
         try:
-            	w = whois.whois(domain)
+                w = whois.whois(domain)
                 if isinstance(w.expiration_date, list):
                         packet = ZabbixMetric(wwwhost, 'domain.expiry['+domain+']', w.expiration_date[0].timestamp()),
                 else:
-                     	if w.expiration_date:
+                        if w.expiration_date:
                                 packet = ZabbixMetric(wwwhost, 'domain.expiry['+domain+']', w.expiration_date.timestamp()),
                 result = ZabbixSender(use_config=True).send(packet)
         except:
-               	print("Error occurred while executing whois() for %s." % domain)
+                print("Error occurred while executing whois() for %s." % domain)
 
   ## some tests
 #print(w)
