@@ -7,7 +7,7 @@
 
 ## Known issues
 
-`.no` domains are broken since python-whois just returns a bunch of nulls.
+All TLDs don't necessarily have whois servers. Please verify that it is possible to retrieve data with the regular `whois` terminal command before using this script.
 
 ## Description
 
