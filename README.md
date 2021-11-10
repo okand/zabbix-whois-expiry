@@ -10,7 +10,7 @@
 All TLDs don't necessarily have whois servers. Please verify that it is possible to retrieve data directly in the terminal with the regular `whois` command before using this script.
 
 ## Confused?
-If the instructions below are too confusing, check the new [step by step insctructions](step-by-step.md).
+If the instructions below are too confusing, check the new [step by step instructions](step-by-step.md).
 
 ## Description
 
